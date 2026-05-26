@@ -29,6 +29,8 @@ SYMBOLS = {
     'RU0': {'name': '橡胶主力',   'sina_code': 'RU0', 'daily_code': 'RU0'},  # 上期所
     'P0':  {'name': '棕榈油主力', 'sina_code': 'P0',  'daily_code': 'P0'},   # 大商所
     'AG0': {'name': '沪银主力',   'sina_code': 'AG0', 'daily_code': 'AG0'},  # 上期所
+    'AO0': {'name': '氧化铝主力', 'sina_code': 'AO0', 'daily_code': 'AO0'},  # 上期所
+    'BU0': {'name': '沥青主力',   'sina_code': 'BU0', 'daily_code': 'BU0'},  # 上期所
 }
 
 CACHE_DIR = os.path.join(os.path.dirname(__file__), "data")
@@ -90,6 +92,8 @@ _SYMBOL_NIGHT_END = {
     'RU0': ( 1 * 60,       True),   # 上期所橡胶        次日 01:00
     'P0':  (23 * 60,       False),  # 大商所棕榈油      23:00
     'AG0': ( 2 * 60 + 30,  True),   # 上期所沪银        次日 02:30
+    'AO0': ( 1 * 60,  True),        # 上期所氧化铝      次日 02:30
+    'BU0': ( 23 * 60,  False),      # 上期所沥青        23:00
 }
 
 def get_market_status(symbol, now=None):
